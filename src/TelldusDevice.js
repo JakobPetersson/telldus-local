@@ -53,62 +53,62 @@ class TelldusDevice extends TelldusAccessory {
     }
 
     bell() {
-        return TelldusLocalClient.getInstance().deviceBell(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceBell(this.getId()).then(() => {
             this.setStatus('bell');
             return this;
         });
     }
 
     turnOff() {
-        return TelldusLocalClient.getInstance().deviceTurnOff(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceTurnOff(this.getId()).then(() => {
             this.setStatus('off');
             return this;
         });
     }
 
     turnOn() {
-        return TelldusLocalClient.getInstance().deviceTurnOn(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceTurnOn(this.getId()).then(() => {
             this.setStatus('on');
             return this;
         });
     }
 
     down() {
-        return TelldusLocalClient.getInstance().deviceDown(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceDown(this.getId()).then(() => {
             this.setStatus('down');
             return this;
         });
     }
 
     up() {
-        return TelldusLocalClient.getInstance().deviceUp(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceUp(this.getId()).then(() => {
             this.setStatus('up');
             return this;
         });
     }
 
     learn() {
-        return TelldusLocalClient.getInstance().deviceLearn(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceLearn(this.getId()).then(() => {
             return this;
         });
     }
 
     stop() {
-        return TelldusLocalClient.getInstance().deviceStop(this.id).then(() => {
+        return TelldusLocalClient.getInstance().deviceStop(this.getId()).then(() => {
             this.setStatus('off');
             return this;
         });
     }
 
     dim(level) {
-        return TelldusLocalClient.getInstance().deviceDim(this.id, level).then(() => {
+        return TelldusLocalClient.getInstance().deviceDim(this.getId(), level).then(() => {
             this.setStatus('dim');
             return this;
         });
     }
 
     command(method, value) {
-        return TelldusLocalClient.getInstance().deviceCommand(this.id, method, value).then(() => {
+        return TelldusLocalClient.getInstance().deviceCommand(this.getId(), method, value).then(() => {
             return this;
         });
     }
